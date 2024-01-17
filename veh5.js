@@ -1,5 +1,5 @@
 // Our data from an Excel sheet
-const years = [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009,]; // Example years
+const years = [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, "other"]; // Example years
 const makes = ["Audi", "Bentley", "BMW", "Cadillac", "Chevrolet", "Chrysler", "Fiat", "Ford", "Honda", "Hyundai", "Jeep", "Kia", "Lexus", "Lincoln", "Lucid", "Mercedes Benz", "MINI", "Mitsubishi", "Nissan", "Polestar", "Porsche", "Rivian", "smart USA", "Subaru", "Tesla", "Toyota", "Volkswagen", "Volvo", "Other"]; // Example makes
 const models = {
     Audi: ["Model","A3 e-tron", "A3 e-tron ultra", "A7 TFSI e Quattro", "A8 L 60 TFSI e Quattro", "A8L PHEV", "e-tron", "e-tron Sportback", "Q5 PHEV", "Q5 TFSI e Quattro", "Other"],
