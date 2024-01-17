@@ -116,9 +116,9 @@ const validCombinations = [
   { year: 2022, make: "Lexus", model: "NX Plug-In Hybrid" },
   { year: 2022, make: "Lucid", model: "Model" },
   { year: 2022, make: "Lucid", model: "Air (All Models)" },
-  { year: 2022, make: "Mercedes_Benz", model: "Model" },
-  { year: 2022, make: "Mercedes_Benz", model: "EQB SUV (All Models)" },
-  { year: 2022, make: "Mercedes_Benz", model: "EQS Sedan (All Models)" },
+  { year: 2022, make: "Mercedes Benz", model: "Model" },
+  { year: 2022, make: "Mercedes Benz", model: "EQB SUV (All Models)" },
+  { year: 2022, make: "Mercedes Benz", model: "EQS Sedan (All Models)" },
   { year: 2022, make: "Porsche", model: "Model" },
   { year: 2022, make: "Porsche", model: "Cayenne E-Hybrid (All Models)" },
   { year: 2022, make: "Porsche", model: "Panamera E-Hybrid (All Models)" },
@@ -270,9 +270,9 @@ const validCombinations = [
   { year: 2020, make: "Kia", model: "Soul EV" },
   { year: 2020, make: "Lincoln", model: "Model" },
   { year: 2020, make: "Lincoln", model: "Aviator Grand Touring" },
-  { year: 2020, make: "Mercedes_Benz", model: "Model" },
-  { year: 2020, make: "Mercedes_Benz", model: "GLC350e 4matic EQ" },
-  { year: 2020, make: "Mercedes_Benz", model: "S560e EQ PHEV" },
+  { year: 2020, make: "Mercedes Benz", model: "Model" },
+  { year: 2020, make: "Mercedes Benz", model: "GLC350e 4matic EQ" },
+  { year: 2020, make: "Mercedes Benz", model: "S560e EQ PHEV" },
   { year: 2020, make: "Mitsubishi", model: "Model" },
   { year: 2020, make: "Mitsubishi", model: "Outlander PHEV" },
   { year: 2020, make: "MINI", model: "Model" },
@@ -336,8 +336,8 @@ const validCombinations = [
   { year: 2019, make: "Kia", model: "Niro PHEV" },
   { year: 2019, make: "Kia", model: "Optima PHEV" },
   { year: 2019, make: "Kia", model: "Soul EV" },
-  { year: 2019, make: "Mercedes_Benz", model: "Model" },
-  { year: 2019, make: "Mercedes_Benz", model: "GLC350e 4matic" },
+  { year: 2019, make: "Mercedes Benz", model: "Model" },
+  { year: 2019, make: "Mercedes Benz", model: "GLC350e 4matic" },
   { year: 2019, make: "Mitsubishi", model: "Model" },
   { year: 2019, make: "Mitsubishi", model: "Outlander PHEV" },
   { year: 2019, make: "MINI", model: "Model" },
@@ -347,9 +347,9 @@ const validCombinations = [
   { year: 2019, make: "Porsche", model: "Model" },
   { year: 2019, make: "Porsche", model: "Cayenne E-Hybrid (All models)" },
   { year: 2019, make: "Porsche", model: "Panamera E-Hybrid (All models)" },	
-  { year: 2019, make: "smart_USA", model: "Model" },
-  { year: 2019, make: "smart_USA", model: "EQ Fortwo Cabrio" },
-  { year: 2019, make: "smart_USA", model: "EQ Fortwo Coupe" },
+  { year: 2019, make: "smart USA", model: "Model" },
+  { year: 2019, make: "smart USA", model: "EQ Fortwo Cabrio" },
+  { year: 2019, make: "smart USA", model: "EQ Fortwo Coupe" },
   { year: 2019, make: "Tesla", model: "Model" },
   { year: 2019, make: "Tesla", model: "Model 3" },
   { year: 2019, make: "Tesla", model: "Model S" },
@@ -394,9 +394,9 @@ const validCombinations = [
   { year: 2018, make: "Kia", model: "Niro PHEV" },
   { year: 2018, make: "Kia", model: "Optima PHEV" },
   { year: 2018, make: "Kia", model: "Soul EV" },
-  { year: 2018, make: "Mercedes_Benz", model: "Model" },
-  { year: 2018, make: "Mercedes_Benz", model: "GLC350e 4matic" },
-  { year: 2018, make: "Mercedes_Benz", model: "GLE550e 4matic PHEV" },
+  { year: 2018, make: "Mercedes Benz", model: "Model" },
+  { year: 2018, make: "Mercedes Benz", model: "GLC350e 4matic" },
+  { year: 2018, make: "Mercedes Benz", model: "GLE550e 4matic PHEV" },
   { year: 2018, make: "MINI", model: "Model" },
   { year: 2018, make: "MINI", model: "Cooper S E Countryman ALL4" },
   { year: 2018, make: "Mitsubishi", model: "Model" },
@@ -406,9 +406,9 @@ const validCombinations = [
   { year: 2018, make: "Porsche", model: "Model" },
   { year: 2018, make: "Porsche", model: "Cayenne E-Hybrid (All models)" },
   { year: 2018, make: "Porsche", model: "Panamera E-Hybrid (All models)" },
-  { year: 2018, make: "smart_USA", model: "Model" },
-  { year: 2018, make: "smart_USA", model: "Coupe EV" },
-  { year: 2018, make: "smart_USA", model: "Cabrio EV" },
+  { year: 2018, make: "smart USA", model: "Model" },
+  { year: 2018, make: "smart USA", model: "Coupe EV" },
+  { year: 2018, make: "smart USA", model: "Cabrio EV" },
   { year: 2018, make: "Tesla", model: "Model" },
   { year: 2018, make: "Tesla", model: "Model 3" },
   { year: 2018, make: "Tesla", model: "Model S" },
@@ -449,19 +449,19 @@ const validCombinations = [
   { year: 2017, make: "Kia", model: "Model" },
   { year: 2017, make: "Kia", model: "Optima PHEV" },
   { year: 2017, make: "Kia", model: "Soul EV" },
-  { year: 2017, make: "Mercedes_Benz", model: "Model" },
-  { year: 2017, make: "Mercedes_Benz", model: "B-Class EV (B250e)" },
-  { year: 2017, make: "Mercedes_Benz", model: "GLE550e 4matic PHEV" },
-  { year: 2017, make: "Mercedes_Benz", model: "S550e PHEV" },
+  { year: 2017, make: "Mercedes Benz", model: "Model" },
+  { year: 2017, make: "Mercedes Benz", model: "B-Class EV (B250e)" },
+  { year: 2017, make: "Mercedes Benz", model: "GLE550e 4matic PHEV" },
+  { year: 2017, make: "Mercedes Benz", model: "S550e PHEV" },
   { year: 2017, make: "Mitsubishi", model: "Model" },
   { year: 2017, make: "Mitsubishi", model: "i-MiEV" },
   { year: 2017, make: "Nissan", model: "Model" },
   { year: 2017, make: "Nissan", model: "Leaf (All Models)" },
   { year: 2017, make: "Porsche", model: "Model" },
   { year: 2017, make: "Porsche", model: "Cayenne E-Hybrid (All models)" },
-  { year: 2017, make: "smart_USA", model: "Model" },
-  { year: 2017, make: "smart_USA", model: "Coupe EV" },
-  { year: 2017, make: "smart_USA", model: "Cabrio EV" },
+  { year: 2017, make: "smart USA", model: "Model" },
+  { year: 2017, make: "smart USA", model: "Coupe EV" },
+  { year: 2017, make: "smart USA", model: "Cabrio EV" },
   { year: 2017, make: "Tesla", model: "Model" },
   { year: 2017, make: "Tesla", model: "Model 3" },
   { year: 2017, make: "Tesla", model: "Model S" },
@@ -498,18 +498,18 @@ const validCombinations = [
   { year: 2016, make: "Hyundai", model: "Sonata Plug-In Hybrid Vehicle" },
   { year: 2016, make: "Kia", model: "Model" },
   { year: 2016, make: "Kia", model: "Soul EV" },
-  { year: 2016, make: "Mercedes_Benz", model: "Model" },
-  { year: 2016, make: "Mercedes_Benz", model: "GLE550e 4matic PHEV" },
-  { year: 2016, make: "Mercedes_Benz", model: "B-Class EV (B250e)" },
-  { year: 2016, make: "Mercedes_Benz", model: "S550e PHEV" },
+  { year: 2016, make: "Mercedes Benz", model: "Model" },
+  { year: 2016, make: "Mercedes Benz", model: "GLE550e 4matic PHEV" },
+  { year: 2016, make: "Mercedes Benz", model: "B-Class EV (B250e)" },
+  { year: 2016, make: "Mercedes Benz", model: "S550e PHEV" },
   { year: 2016, make: "Mitsubishi", model: "Model" },
   { year: 2016, make: "Mitsubishi", model: "i-MiEV" },
   { year: 2016, make: "Nissan", model: "Model" },
   { year: 2016, make: "Nissan", model: "Leaf (All Models)" },
   { year: 2016, make: "Porsche", model: "Model" },
   { year: 2016, make: "Porsche", model: "Cayenne E-Hybrid (All models)" },
-  { year: 2016, make: "smart_USA", model: "Model" },
-  { year: 2016, make: "smart_USA", model: "Coupe EV" },
+  { year: 2016, make: "smart USA", model: "Model" },
+  { year: 2016, make: "smart USA", model: "Coupe EV" },
   { year: 2016, make: "Tesla", model: "Model" },
   { year: 2016, make: "Tesla", model: "Model X" },
   { year: 2016, make: "Tesla", model: "Model S" },
@@ -536,17 +536,17 @@ const validCombinations = [
   { year: 2015, make: "Ford", model: "C-Max Energi" },
   { year: 2015, make: "Kia", model: "Model" },
   { year: 2015, make: "Kia", model: "Soul EV" },
-  { year: 2015, make: "Mercedes_Benz", model: "Model" },
-  { year: 2015, make: "Mercedes_Benz", model: "S550e PHEV" },
-  { year: 2015, make: "Mercedes_Benz", model: "B-Class EV (B250e)" },
+  { year: 2015, make: "Mercedes Benz", model: "Model" },
+  { year: 2015, make: "Mercedes Benz", model: "S550e PHEV" },
+  { year: 2015, make: "Mercedes Benz", model: "B-Class EV (B250e)" },
   { year: 2015, make: "Nissan", model: "Model" },
   { year: 2015, make: "Nissan", model: "Leaf (All Models)" },
   { year: 2015, make: "Porsche", model: "Model" },
   { year: 2015, make: "Porsche", model: "Cayenne E-Hybrid (All models)" },
   { year: 2015, make: "Porsche", model: "Panamera E-Hybrid (All models)" },
-  { year: 2015, make: "smart_USA", model: "Model" },
-  { year: 2015, make: "smart_USA", model: "Cabrio EV" },
-  { year: 2015, make: "smart_USA", model: "Coupe EV" },	
+  { year: 2015, make: "smart USA", model: "Model" },
+  { year: 2015, make: "smart USA", model: "Cabrio EV" },
+  { year: 2015, make: "smart USA", model: "Coupe EV" },	
   { year: 2015, make: "Tesla", model: "Model" },
   { year: 2015, make: "Tesla", model: "Model S" },
   { year: 2015, make: "Volkswagen", model: "Model" },
@@ -566,17 +566,17 @@ const validCombinations = [
   { year: 2014, make: "Ford", model: "C-Max Energi" },
   { year: 2014, make: "Ford", model: "Focus Electric" },
   { year: 2014, make: "Ford", model: "Fusion Energi" },
-  { year: 2014, make: "Mercedes_Benz", model: "Model" }, 
-  { year: 2014, make: "Mercedes_Benz", model: "B-Class EV (B250e)" },  
+  { year: 2014, make: "Mercedes Benz", model: "Model" }, 
+  { year: 2014, make: "Mercedes Benz", model: "B-Class EV (B250e)" },  
   { year: 2014, make: "Porsche", model: "Model" },
   { year: 2014, make: "Porsche", model: "Panamera E-Hybrid (All models)" },
   { year: 2014, make: "Mitsubishi", model: "Model" },
   { year: 2014, make: "Mitsubishi", model: "i-MiEV" },
   { year: 2014, make: "Nissan", model: "Model" },
   { year: 2014, make: "Nissan", model: "Leaf (All Models)" },
-  { year: 2014, make: "smart_USA", model: "Model" },
-  { year: 2014, make: "smart_USA", model: "Cabrio EV" },
-  { year: 2014, make: "smart_USA", model: "Coupe EV" },
+  { year: 2014, make: "smart USA", model: "Model" },
+  { year: 2014, make: "smart USA", model: "Cabrio EV" },
+  { year: 2014, make: "smart USA", model: "Coupe EV" },
   { year: 2014, make: "Tesla", model: "Model" },
   { year: 2014, make: "Tesla", model: "Model S" },
   { year: 2014, make: "Toyota", model: "Model" },
@@ -592,9 +592,9 @@ const validCombinations = [
   { year: 2013, make: "Ford", model: "C-Max Energi" },
   { year: 2013, make: "Nissan", model: "Model" },
   { year: 2013, make: "Nissan", model: "Leaf (All Models)" },
-  { year: 2013, make: "smart_USA", model: "Model" },
-  { year: 2013, make: "smart_USA", model: "Cabrio EV" },
-  { year: 2013, make: "smart_USA", model: "Coupe EV" },
+  { year: 2013, make: "smart USA", model: "Model" },
+  { year: 2013, make: "smart USA", model: "Cabrio EV" },
+  { year: 2013, make: "smart USA", model: "Coupe EV" },
   { year: 2013, make: "Tesla", model: "Model" },
   { year: 2013, make: "Tesla", model: "Model S" },
   { year: 2013, make: "Toyota", model: "Model" },
@@ -639,6 +639,8 @@ function checkCombination() {
     );
   });
 
+
+
   // isCombinationValid && selectedModel == "Model"
   //   ? (cominations = 2)
   //   : (cominations = 3);
@@ -654,7 +656,35 @@ function checkCombination() {
     yesButton3.classList.contains("clicked") &&
     yesButton4.classList.contains("clicked");
 
-  if ((selectedModel !== "Model" && selectedModel) || Q1andQ2Combination == 2) {
+  var isCombinationNotValidOnlyButton =
+   noButton3.classList.contains("clicked") ||
+    noButton4.classList.contains("clicked");
+      
+ // makes qualification badge red if either Q1 or Q3 is answered in the negative 
+
+  if (Q1andQ2Combination >= 1 && isCombinationNotValidOnlyButton) {
+    qualificationBadge.textContent = "You Don't Appear to Qualify";
+      qualificationBadge.style.backgroundColor = "rgb(219, 14, 2)"
+  } else {
+     qualificationBadge.textContent = "Qualification Pending";
+      qualificationBadge.style.backgroundColor = "";
+  }
+
+// if  car values are selected before yes/no buttons
+
+  if ((selectedModel !== "Model" && selectedModel) && Q1andQ2Combination <= 2 && selectedYear) {
+    if (
+      (isCombinationValid)
+    ) {
+        
+    } else {
+     qualificationBadge.textContent = "You Don't Appear to Qualify";
+      qualificationBadge.style.backgroundColor = "rgb(219, 14, 2)";;
+    }
+  }
+
+// main logic
+  if ((selectedModel !== "Model" && selectedModel) && Q1andQ2Combination == 2 && selectedYear) {
     if (
       (isCombinationValidButton && Q1andQ2Combination == 2) ||
       (isCombinationValidOnlyButton &&
