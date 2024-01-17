@@ -86,10 +86,10 @@ function checkQualification() {
     const qualificationBadge = document.getElementById("qualification-badge");
     
 }
-//causing issues
 
-//qualificationBadge.textContent = isQualified ? "You Appear to Qualify" : "You Don't Appear to Qualify";
-  //  qualificationBadge.style.backgroundColor = isQualified ? "#86bf8b" : "#db0e02";
+
+qualificationBadge.textContent = isQualified ? "You Appear to Qualify" : "You Don't Appear to Qualify";
+  qualificationBadge.style.backgroundColor = isQualified ? "#86bf8b" : "#db0e02";
 
 
 
