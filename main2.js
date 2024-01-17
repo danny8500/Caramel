@@ -663,19 +663,10 @@ function checkCombination() {
     noButton4.classList.contains("clicked");
       
 
- 
-// if  car values are selected before yes/no buttons
 
-  if ((selectedModel !== "Model" && selectedModel) && Q1andQ2Combination <= 1 && selectedYear)  {
-    if (
-      (isCombinationValid)
-    ) {
-        
-    } else {
-     qualificationBadge.textContent = "You Don't Appear to Qualify";
-      qualificationBadge.style.backgroundColor = "rgb(219, 14, 2)";;
-    }
-  }
+ 
+ 
+
 
 
 // main logic
@@ -691,19 +682,27 @@ function checkCombination() {
       qualificationBadge.textContent = "You Don't Appear to Qualify";
       qualificationBadge.style.backgroundColor = "rgb(219, 14, 2)";
     }
+ 
   }
-  
- // makes qualification badge red if either Q1 or Q3 is answered in the negative 
-
-   if (Q1andQ2Combination = 1 && isCombinationNotValidOnlyButton) {
+   // makes qualification badge red if either Q1 or Q3 is answered in the negative 
+   else if  (Q1andQ2Combination = 1 && isCombinationNotValidOnlyButton) {
     qualificationBadge.textContent = "You Don't Appear to Qualify";
-      qualificationBadge.style.backgroundColor = "rgb(219, 14, 2)"
-    
-  } else {
-     qualificationBadge.textContent = "Qualification Pending";
-      qualificationBadge.style.backgroundColor = "";
-  }
+      qualificationBadge.style.backgroundColor = "rgb(219, 14, 2)" }
+   
+// if  car values are selected before yes/no buttons
 
+  else if ((selectedModel !== "Model" && selectedModel) && Q1andQ2Combination <= 1 && selectedYear)  {
+    if (
+      (isCombinationValid)
+    ) {
+        
+    } else {
+     qualificationBadge.textContent = "You Don't Appear to Qualify";
+      qualificationBadge.style.backgroundColor = "rgb(219, 14, 2)";;
+    }
+  }
+  else {qualificationBadge.textContent = "Qualification Pending";
+      qualificationBadge.style.backgroundColor = "";}
 }
 
 
