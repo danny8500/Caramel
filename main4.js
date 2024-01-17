@@ -670,9 +670,9 @@ function checkCombination() {
 
 
 // main logic
-  if ((selectedModel !== "Model" && selectedModel) && Q1andQ2Combination == 2 && selectedYear) {
+  if ((selectedModel !== "Model" && selectedModel) &&  yesButton3.classList.contains("clicked") && yesButton4.classList.contains("clicked") && selectedYear) {
     if (
-      (isCombinationValidButton && Q1andQ2Combination == 2) ||
+      (isCombinationValidButton && yesButton3.classList.contains("clicked") && yesButton4.classList.contains("clicked")) ||
       (isCombinationValidOnlyButton &&
         (selectedModel == "Model" || !selectedModel))
     ) {
@@ -685,16 +685,17 @@ function checkCombination() {
  
   }
    // makes qualification badge red if either Q1 or Q3 is answered in the negative 
-   else if  (Q1andQ2Combination = 1 && isCombinationNotValidOnlyButton) {
-    qualificationBadge.textContent = "You Don't Appear to Qualify";
+   else if  ((noButton3.classList.contains("clicked") ||
+    noButton4.classList.contains("clicked")) && isCombinationNotValidOnlyButton) {
+    qualificationBadge.textContent = "You Don't Appear to Qualify" ;
       qualificationBadge.style.backgroundColor = "rgb(219, 14, 2)" }
    
 // if  car values are selected before yes/no buttons
 
-  else if ((selectedModel !== "Model" && selectedModel) && Q1andQ2Combination <= 1 && selectedYear)  {
+  else if ((selectedModel !== "Model" && selectedModel) && selectedYear )  {
     if (
       (isCombinationValid)
-    ) {qualificationBadge.textContent = "Qualification Pending";
+    ) {qualificationBadge.textContent = "Qualification Pending"; //this one to change
       qualificationBadge.style.backgroundColor = "";
         
     } else {
