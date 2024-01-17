@@ -662,17 +662,8 @@ function checkCombination() {
    noButton3.classList.contains("clicked") ||
     noButton4.classList.contains("clicked");
       
- // makes qualification badge red if either Q1 or Q3 is answered in the negative 
 
-  if (Q1andQ2Combination >= 1 && isCombinationNotValidOnlyButton) {
-    qualificationBadge.textContent = "You Don't Appear to Qualify";
-      qualificationBadge.style.backgroundColor = "rgb(219, 14, 2)"
-    
-  } else {
-     qualificationBadge.textContent = "Qualification Pending";
-      qualificationBadge.style.backgroundColor = "";
-  }
-
+ 
 // if  car values are selected before yes/no buttons
 
   if ((selectedModel !== "Model" && selectedModel) && Q1andQ2Combination <= 1 && selectedYear)  {
@@ -702,7 +693,17 @@ function checkCombination() {
     }
   }
   
-  // }
+ // makes qualification badge red if either Q1 or Q3 is answered in the negative 
+
+   if (Q1andQ2Combination = 1 && isCombinationNotValidOnlyButton) {
+    qualificationBadge.textContent = "You Don't Appear to Qualify";
+      qualificationBadge.style.backgroundColor = "rgb(219, 14, 2)"
+    
+  } else {
+     qualificationBadge.textContent = "Qualification Pending";
+      qualificationBadge.style.backgroundColor = "";
+  }
+
 }
 
 
