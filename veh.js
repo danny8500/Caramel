@@ -84,7 +84,7 @@ function checkQualification() {
 
     // Update the badge
     const qualificationBadge = document.getElementById("qualification-badge");
-    qualificationBadge.textContent = isQualified ? "You Appear to Qualify meow" : "You Don't Appear to Qualify";
+    qualificationBadge.textContent = isQualified ? "You Appear to Qualify" : "You Don't Appear to Qualify";
     qualificationBadge.style.backgroundColor = isQualified ? "#86bf8b" : "#db0e02";
 }
 
