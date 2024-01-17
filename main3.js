@@ -694,12 +694,14 @@ function checkCombination() {
   else if ((selectedModel !== "Model" && selectedModel) && Q1andQ2Combination <= 1 && selectedYear)  {
     if (
       (isCombinationValid)
-    ) {
+    ) {qualificationBadge.textContent = "Qualification Pending";
+      qualificationBadge.style.backgroundColor = "";
         
     } else {
      qualificationBadge.textContent = "You Don't Appear to Qualify";
       qualificationBadge.style.backgroundColor = "rgb(219, 14, 2)";;
     }
+   
   }
   else {qualificationBadge.textContent = "Qualification Pending";
       qualificationBadge.style.backgroundColor = "";}
