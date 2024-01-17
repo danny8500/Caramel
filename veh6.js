@@ -669,7 +669,7 @@ function checkCombination() {
       qualificationBadge.style.backgroundColor = "rgb(219, 14, 2)"
     
   } else {
-     qualificationBadge.textContent = "Qualification Pending test";
+     qualificationBadge.textContent = "Qualification Pending";
       qualificationBadge.style.backgroundColor = "";
   }
 
@@ -688,7 +688,7 @@ function checkCombination() {
 
 
 // main logic
-  if ((selectedModel !== "Model" && selectedModel) && Q1andQ2Combination == 2 && (selectedYear || selectedYear !== "year")) {
+  if ((selectedModel !== "Model" && selectedModel) && Q1andQ2Combination == 2 && selectedYear) {
     if (
       (isCombinationValidButton && Q1andQ2Combination == 2) ||
       (isCombinationValidOnlyButton &&
