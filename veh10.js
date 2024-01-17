@@ -1,113 +1,101 @@
-// Function to update the qualification status based on button clicks
-function updateQualificationStatus() {
-  // Get the elements representing the Yes buttons
-  var yesButton1 = document.getElementById("yesButton1");
-  var yesButton2 = document.getElementById("yesButton2");
+// Our data from an Excel sheet
+const years = [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, "Other"]; // Example years
+const makes = ["Audi", "Bentley", "BMW", "Cadillac", "Chevrolet", "Chrysler", "Fiat", "Ford", "Honda", "Hyundai", "Jeep", "Kia", "Lexus", "Lincoln", "Lucid", "Mercedes Benz", "MINI", "Mitsubishi", "Nissan", "Polestar", "Porsche", "Rivian", "smart USA", "Subaru", "Tesla", "Toyota", "Volkswagen", "Volvo", "Other"]; // Example makes
+const models = {
+    Audi: ["Model","A3 e-tron", "A3 e-tron ultra", "A7 TFSI e Quattro", "A8 L 60 TFSI e Quattro", "A8L PHEV", "e-tron", "e-tron Sportback", "Q5 PHEV", "Q5 TFSI e Quattro", "Other"],
+    Bentley: ["Model", "Bentayga Hybrid SUV", "Other"],
+    BMW: ["Model", "330e", "330e xDrive", "530e", "530e xDrive", "740e", "740e xDrive", "745e xDrive", "i3 (60 Ah) Sedan", "i3 Sedan", "i3 Sedan with Range Extender", "i3s Sedan", "i3s Sedan with Range Extender", "i4 Gran Coupe", "i8", "i8 Coupe", "i8 Roadster", "X3 xDrive30e", "X5 xDrive40e", "X5 xDrive45e", "Other"],
+    Cadillac: ["Model", "ELR", "Other"],
+    Chevrolet: ["Model", "Bolt", "Bolt EV", "Bolt EV EUV", "Spark EV", "Volt", "Other"],
+    Chrysler: ["Model", "Pacifica PHEV", "Other"],
+    Fiat: ["Model", "500e", "Other"],
+    Ford: ["Model", "Escape Plug-in Hybrid", "Focus Electric", "C-Max Energi", "Fusion Energi", "Mustang Mach-E", "Other"],
+    Honda: ["Model", "Clarity Plug-in Hybrid", "Other"],
+    Hyundai: ["Model", "Ioniq Electric Battery Vehicle", "Ioniq Plug-In Hybrid Electric Vehicle", "Kona Electric Vehicle", "Nexo Blue Fuel Cell Vehicle", "Nexo Fuel Cell Vehicle", "Sonata Plug-In Hybrid Vehicle", "Other"],
+    Jeep: ["Model", "Wrangler 4xe", "Other"],
+    Kia: ["Model", "Niro EV", "Niro PHEV", "Optima PHEV", "Soul EV", "Other"],
+    Lexus: ["Model", "NX Plug-In Hybrid"],
+    Lincoln: ["Model", "Aviator Grand Touring", "Corsair Grand Touring", "Other"],
+    Lucid: ["Model", "Air (All Models)", "Other"],
+    "Mercedes Benz": ["Model", "B-Class EV (B250e)", "EQB SUV (All Models)", "EQS Sedan (All Models)", "GLC350e 4matic", "GLC350e 4matic EQ", "GLE550e 4matic PHEV", "S550e PHEV", "S560e EQ PHEV", "Other"],
+    MINI: ["Model", "Cooper S E Countryman ALL4", "Cooper S E Hardtop", "Other"],
+    Mitsubishi: ["Model", "i-MiEV", "Outlander PHEV", "Other"],
+    Nissan: ["Model", "Leaf (All Models)", "Other"],
+    Polestar: ["Model", "Polestar 1", "Polestar 2", "Other"],
+    Porsche: ["Model", "Cayenne E-Hybrid (All models)", "Cayenne E-Hybrid (All Models)", "Panamera E-Hybrid (All models)", "Panamera E-Hybrid (All Models)", "Taycan (All EV Models)", "Taycan (All Models)", "Other"],
+    Rivian: ["Model", "EDV 700", "R1S", "R1T", "Other"],
+    "smart USA": ["Model", "Cabrio EV", "Coupe EV", "EQ Fortwo Cabrio", "EQ Fortwo Coupe", "Other"],
+    Subaru: ["Model", "Crosstrek Hybrid", "Crosstrek Plug-In Hybrid", "Other"],
+    Tesla: ["Model", "Model 3", "Model S", "Model X", "Model Y", "Roadster", "Other"],
+    Toyota: ["Model", "Mirai", "Prius Prime Plug-In Hybrid", "RAV4 EV", "RAV4 Prime Plug-In Hybrid", "Other"],
+    Volkswagen: ["Model", "e-Golf", "ID.4 (All Models)", "Other"],
+    Volvo: ["Model", "C40 Recharge", "S60", "S90", "V60", "XC40 Recharge", "XC60", "XC90", "Other"],
+  Other: ["Model"],
+  Other: ["Other"],
+}; 
 
-  // Get the elements representing the No buttons
-  var noButton1 = document.getElementById("noButton1");
-  var noButton2 = document.getElementById("noButton2");
+// Populate the year dropdown
+const yearDropdown = document.getElementById("year");
+years.forEach(year => {
+    const option = document.createElement("option");
+    option.value = year;
+    option.text = year;
+    yearDropdown.add(option);
+});
 
-  // Get the qualification badge element
-  var qualificationBadge = document.getElementById("qualification-badge1");
+// Populate the make dropdown
+const makeDropdown = document.getElementById("make");
+makes.forEach(make => {
+    const option = document.createElement("option");
+    option.value = make;
+    option.text = make;
+    makeDropdown.add(option);
+});
 
-  // Add click event listeners to the Yes buttons
-  yesButton1.addEventListener("click", function (event) {
-    handleButtonClick(event, yesButton1, noButton1);
-  });
+// Populate the model dropdown based on the selected make
+makeDropdown.addEventListener("change", () => {
+    const selectedMake = makeDropdown.value;
+    const modelDropdown = document.getElementById("model");
+    modelDropdown.innerHTML = ""; // Clear previous options
 
-  yesButton2.addEventListener("click", function (event) {
-    handleButtonClick(event, yesButton2, noButton2);
-  });
+    models[selectedMake].forEach(model => {
+        const option = document.createElement("option");
+        option.value = model;
+        option.text = model;
+        modelDropdown.add(option);
+    });
+});
 
-  // Add click event listeners to the No buttons
-  noButton1.addEventListener("click", function (event) {
-    handleButtonClick(event, noButton1, yesButton1);
-  });
 
-  noButton2.addEventListener("click", function (event) {
-    handleButtonClick(event, noButton2, yesButton2);
-  });
 
-  // Function to handle button clicks
-  function handleButtonClick(event, clickedButton, otherButton) {
-    // Remove the "clicked" class from the other button in the pair
-    otherButton.classList.remove("clicked");
 
-    // Toggle the "clicked" class for the clicked button
-    clickedButton.classList.toggle("clicked");
+// Add an event listener for when the user selects a model
+const modelDropdown = document.getElementById("model");
+modelDropdown.addEventListener("change", checkQualification);
 
-    // Get the state of Yes buttons
-    var isYesButton1Clicked = yesButton1.classList.contains("clicked");
-    var isYesButton2Clicked = yesButton2.classList.contains("clicked");
+// Function to check qualification and update the badge
+function checkQualification() {
+    const selectedYear = document.getElementById("year").value;
+    const selectedMake = document.getElementById("make").value;
+    const selectedModel = document.getElementById("model").value;
 
-    // Get the state of No buttons
-    var isNoButton1Clicked = noButton1.classList.contains("clicked");
-    var isNoButton2Clicked = noButton2.classList.contains("clicked");
+    // Use your logic to check qualification based on the selected year, make, and model
+    const isQualified = checkQualificationInExcel(selectedYear, selectedMake, selectedModel);
 
-    // Check conditions and update the qualification status and background color
-    if (isYesButton1Clicked && isYesButton2Clicked) {
-      qualificationBadge.textContent = "You Appear to Qualify";
-      qualificationBadge.style.backgroundColor = "rgb(134, 191, 139)";
-    } else if (isNoButton1Clicked || isNoButton2Clicked) {
-      qualificationBadge.textContent = "You Don't Appear to Qualify";
-      qualificationBadge.style.backgroundColor = "rgb(219, 14, 2)";
-    } else {
-      // If neither condition is met, reset the qualification status and background color
-      qualificationBadge.textContent = "Qualification Pending";
-      qualificationBadge.style.backgroundColor = "";
-    }
-  }
+    // Update the badge
+    const qualificationBadge = document.getElementById("qualification-badge");
+    qualificationBadge.textContent = isQualified ? "You Appear to Qualify" : "You Don't Appear to Qualify";
+    qualificationBadge.style.backgroundColor = isQualified ? "#86bf8b" : "#db0e02";
 }
 
-// Call the function to set up the event listeners
-updateQualificationStatus();
 
-// for second section logic ========================:
 
-var qualificationBadge = document.getElementById("qualification-badge");
-var yesButton3 = document.getElementById("yesButton3");
-var yesButton4 = document.getElementById("yesButton4");
 
-// on left button
-function handleButtonClick(clickedId, otherId) {
-  var clickedButton = document.getElementById(clickedId);
-  var otherButton = document.getElementById(otherId);
-
-  clickedButton.classList.add("clicked");
-
-  otherButton.classList.remove("clicked");
-
-  return false;
-}
-
-// Attach event listeners to the buttons
-document.getElementById("yesButton3").addEventListener("click", function () {
-  handleButtonClick("yesButton3", "noButton3");
-  // qualificationBadgeChanged();
-  checkCombination();
-});
-
-document.getElementById("noButton3").addEventListener("click", function () {
-  handleButtonClick("noButton3", "yesButton3");
-  // qualificationBadgeChanged();
-  checkCombination();
-});
-
-document.getElementById("noButton4").addEventListener("click", function () {
-  handleButtonClick("noButton4", "yesButton4");
-  // qualificationBadgeChanged();
-  checkCombination();
-});
-
-document.getElementById("yesButton4").addEventListener("click", function () {
-  handleButtonClick("yesButton4", "noButton4");
-  // qualificationBadgeChanged();
-  checkCombination();
-});
-
-const validCombinations = [
-  { year: 2022, make: "BMW", model: "Model" },
+function checkQualificationInExcel(year, make, model) {
+    // Implement your logic to check qualification based on Excel sheet data
+    // For example, you might have an array of valid combinations
+    const validCombinations = [
+        { year: 2022, make: "BMW", model: "Model" },
   { year: 2022, make: "BMW", model: "i4 Gran Coupe" },
   { year: 2022, make: "Chevrolet", model: "Model" },
   { year: 2022, make: "Chevrolet", model: "Bolt EV" },
@@ -621,111 +609,11 @@ const validCombinations = [
   { year: 2010, make: "Tesla", model: "Roadster" },
   { year: 2009, make: "Tesla", model: "Model" },
   { year: 2009, make: "Tesla", model: "Roadster" },
-];
+        // Add more valid combinations as needed
+    ];
 
-// let cominations = 1;
-
-function checkCombination() {
-  // if (document.getElementById("model").value) {
-  const selectedYear = document.getElementById("year").value;
-  const selectedMake = document.getElementById("make").value;
-  const selectedModel = document.getElementById("model").value;
-
-  const isCombinationValid = validCombinations.some((combination) => {
-    return (
-      combination.year == selectedYear &&
-      combination.make == selectedMake &&
-      combination.model == selectedModel
+    // Check if the selected combination is in the valid combinations array
+    return validCombinations.some(combination => 
+        combination.year == year && combination.make == make && combination.model == model
     );
-  });
-
-
-
-  // isCombinationValid && selectedModel == "Model"
-  //   ? (cominations = 2)
-  //   : (cominations = 3);
-
-  var Q1andQ2Combination = document.querySelectorAll(".clicked").length;
-
-  var isCombinationValidButton =
-    yesButton3.classList.contains("clicked") &&
-    yesButton4.classList.contains("clicked") &&
-    isCombinationValid;
-
-  var isCombinationValidOnlyButton =
-    yesButton3.classList.contains("clicked") &&
-    yesButton4.classList.contains("clicked");
-
-// is combination not valid variable
-
-  var isCombinationNotValidOnlyButton =
-   noButton3.classList.contains("clicked") ||
-    noButton4.classList.contains("clicked");
-      
-
- 
-// if  car values are selected before yes/no buttons
-
-  if ((selectedModel !== "Model" && selectedModel) && Q1andQ2Combination <= 1 && selectedYear)  {
-    if (
-      (isCombinationValid)
-    ) {
-        
-    } else {
-     qualificationBadge.textContent = "You Don't Appear to Qualify";
-      qualificationBadge.style.backgroundColor = "rgb(219, 14, 2)";;
-    }
-  }
-
-
-// main logic
-  if ((selectedModel !== "Model" && selectedModel) && Q1andQ2Combination == 2 && selectedYear) {
-    if (
-      (isCombinationValidButton && Q1andQ2Combination == 2) ||
-      (isCombinationValidOnlyButton &&
-        (selectedModel == "Model" || !selectedModel))
-    ) {
-      qualificationBadge.textContent = "You Appear to Qualify";
-      qualificationBadge.style.backgroundColor = "rgb(134, 191, 139)";
-    } else {
-      qualificationBadge.textContent = "You Don't Appear to Qualify";
-      qualificationBadge.style.backgroundColor = "rgb(219, 14, 2)";
-    }
-  }
-  
- // makes qualification badge red if either Q1 or Q3 is answered in the negative 
-
-   if (Q1andQ2Combination = 1 && isCombinationNotValidOnlyButton) {
-    qualificationBadge.textContent = "You Don't Appear to Qualify";
-      qualificationBadge.style.backgroundColor = "rgb(219, 14, 2)"
-    
-  } else {
-     qualificationBadge.textContent = "Qualification Pending";
-      qualificationBadge.style.backgroundColor = "";
-  }
-
 }
-
-
-
-// Add event listener to the button for checking the combination
-document.getElementById("model").addEventListener("change", checkCombination);
-document.getElementById("make").addEventListener("change", checkCombination);
-document.getElementById("year").addEventListener("change", checkCombination);
-
-
-
-
-// for reset button
-// Define the function to reload the page
-function resetPage() {
-  location.reload();
-}
-
-// Get all elements with class .reset-btn
-const resetButtons = document.querySelectorAll(".reset-btn");
-
-// Attach the click event listener to each reset button
-resetButtons.forEach((button) => {
-  button.addEventListener("click", resetPage);
-});
