@@ -656,6 +656,8 @@ function checkCombination() {
     yesButton3.classList.contains("clicked") &&
     yesButton4.classList.contains("clicked");
 
+// is combination not valid variable
+
   var isCombinationNotValidOnlyButton =
    noButton3.classList.contains("clicked") ||
     noButton4.classList.contains("clicked");
@@ -672,16 +674,18 @@ function checkCombination() {
 
 // if  car values are selected before yes/no buttons
 
-  if ((selectedModel !== "Model" && selectedModel) && Q1andQ2Combination <= 2 && selectedYear) {
+  if ((selectedModel !== "Model" && selectedModel) && Q1andQ2Combination <= 2 && (selectedYear !== "year" || selectedYear || selectedYear == false) ) {
     if (
       (isCombinationValid)
-    ) {
+    ) {qualificationBadge.textContent = "Qualification Pending";
+      qualificationBadge.style.backgroundColor = "";
         
     } else {
      qualificationBadge.textContent = "You Don't Appear to Qualify";
       qualificationBadge.style.backgroundColor = "rgb(219, 14, 2)";;
     }
   }
+
 
 // main logic
   if ((selectedModel !== "Model" && selectedModel) && Q1andQ2Combination == 2 && selectedYear) {
@@ -697,13 +701,19 @@ function checkCombination() {
       qualificationBadge.style.backgroundColor = "rgb(219, 14, 2)";
     }
   }
+  
   // }
 }
+
+
 
 // Add event listener to the button for checking the combination
 document.getElementById("model").addEventListener("change", checkCombination);
 document.getElementById("make").addEventListener("change", checkCombination);
 document.getElementById("year").addEventListener("change", checkCombination);
+
+
+
 
 // for reset button
 // Define the function to reload the page
